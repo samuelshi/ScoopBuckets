@@ -9,7 +9,6 @@ import { customHandler } from './sync/customHandler.mjs';
 const destFilesCache = new Map();
 const lowPrioritySet = parseTxtFile(CONFIG.lowPriorityFile);
 const ignoredSet = parseTxtFile(CONFIG.ignoredFile);
-const now = new Date();
 
 function parseTxtFile(filename) {
   const str = fs.readFileSync(path.resolve(CONFIG.rootDir, filename), 'utf8').trim();
@@ -137,10 +136,7 @@ async function gitCommit() {
     `git config user.name "github-actions[samuel.shi]"`,
     `git config user.email "github-actions[bot]@users.noreply.github.com"`,
     `git add --all`,
-    //`git commit -m "Updated at ${new Date().toISOString()}"`,
-    `git commit -m "Updated at ${now.toLocaleString("en-US", {
-      timeZone: "Asia/Shanghai",
-    })}"`,
+    `git commit -m "Updated at ${new Date().toISOString()}"`,
     `git push`,
   ];
 
