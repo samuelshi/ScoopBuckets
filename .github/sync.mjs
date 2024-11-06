@@ -9,6 +9,7 @@ import { customHandler } from './sync/customHandler.mjs';
 const destFilesCache = new Map();
 const lowPrioritySet = parseTxtFile(CONFIG.lowPriorityFile);
 const ignoredSet = parseTxtFile(CONFIG.ignoredFile);
+const now = new Date();
 
 function parseTxtFile(filename) {
   const str = fs.readFileSync(path.resolve(CONFIG.rootDir, filename), 'utf8').trim();
@@ -128,14 +129,18 @@ async function syncDir(src, dest, repo = '') {
 
 async function gitCommit() {
   const changes = execSync('git status --short', { encoding: 'utf8' }).trim(); // --untracked-files=no
+
   if (changes.length < 5) return logger.info('Not Updated');
 
   logger.info('Changes:\n', changes);
   const cmds = [
-    `git config user.name "github-actions[lzw.me]"`,
-    `git config user.email "41898282+github-actions[bot]@users.noreply.github.com"`,
+    `git config user.name "github-actions[samuel.shi]"`,
+    `git config user.email "github-actions[bot]@users.noreply.github.com"`,
     `git add --all`,
-    `git commit -m "Updated at ${new Date().toISOString()}"`,
+    //`git commit -m "Updated at ${new Date().toISOString()}"`,
+    `git commit -m "Updated at ${now.toLocaleString("en-US", {
+      timeZone: "Asia/Shanghai",
+    })}"`,
     `git push`,
   ];
 
