@@ -12,7 +12,7 @@
   ],
   "architecture": {
     "64bit": {
-      "url": "https://mirror.ghproxy.com/https://github.com/reqable/reqable-app/releases/download/2.28.0/reqable-app-windows-x86_64.zip",
+      "url": "https://ghp.ci/https://github.com/reqable/reqable-app/releases/download/2.28.0/reqable-app-windows-x86_64.zip",
       "hash": "edda83dcf213689004149428e44706561f270b73c9e295ccb516a26ce4210e8d"
     }
   },
@@ -28,7 +28,7 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://mirror.ghproxy.com/https://github.com/reqable/reqable-app/releases/download/$version/reqable-app-windows-x86_64.zip"
+        "url": "https://ghp.ci/https://github.com/reqable/reqable-app/releases/download/$version/reqable-app-windows-x86_64.zip"
       }
     }
   }

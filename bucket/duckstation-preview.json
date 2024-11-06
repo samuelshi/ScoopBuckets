@@ -11,7 +11,7 @@
     "Place the BIOS file in $persist_dir\\bios",
     "Learn more at: https://www.duckstation.org/wiki/BIOS"
   ],
-  "url": "https://mirror.ghproxy.com/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip",
+  "url": "https://ghp.ci/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip",
   "hash": "f4c9673a830fd2672ebeb508ecd96ee0b46a6338f54718134c77a1f7f94a053a",
   "installer": {
     "script": [
@@ -51,6 +51,6 @@
     "replace": "${year}${month}${day}-g${commit}"
   },
   "autoupdate": {
-    "url": "https://mirror.ghproxy.com/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip"
+    "url": "https://ghp.ci/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip"
   }
 }

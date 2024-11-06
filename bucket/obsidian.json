@@ -6,7 +6,7 @@
     "identifier": "Proprietary",
     "url": "https://obsidian.md/eula"
   },
-  "url": "https://mirror.ghproxy.com/https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.5/Obsidian-1.7.5.exe#/dl.7z",
+  "url": "https://ghp.ci/https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.5/Obsidian-1.7.5.exe#/dl.7z",
   "hash": "741dba3dc1bbe0099e5e1386d969e6de2a48a94018dff16e26307bd25226cb54",
   "architecture": {
     "64bit": {
@@ -30,6 +30,6 @@
     "github": "https://github.com/obsidianmd/obsidian-releases"
   },
   "autoupdate": {
-    "url": "https://mirror.ghproxy.com/https://github.com/obsidianmd/obsidian-releases/releases/download/v$version/Obsidian-$version.exe#/dl.7z"
+    "url": "https://ghp.ci/https://github.com/obsidianmd/obsidian-releases/releases/download/v$version/Obsidian-$version.exe#/dl.7z"
   }
 }

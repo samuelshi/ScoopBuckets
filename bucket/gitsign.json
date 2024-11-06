@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://mirror.ghproxy.com/https://github.com/sigstore/gitsign/releases/download/v0.11.0/gitsign_0.11.0_windows_amd64.exe#/gitsign.exe",
+      "url": "https://ghp.ci/https://github.com/sigstore/gitsign/releases/download/v0.11.0/gitsign_0.11.0_windows_amd64.exe#/gitsign.exe",
       "hash": "519e267a48dbe4db5544877b2f6aa986f54497848aea1acd4387f5f983f64135"
     }
   },
@@ -14,7 +14,7 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://mirror.ghproxy.com/https://github.com/sigstore/gitsign/releases/download/v$version/gitsign_$version_windows_amd64.exe#/gitsign.exe"
+        "url": "https://ghp.ci/https://github.com/sigstore/gitsign/releases/download/v$version/gitsign_$version_windows_amd64.exe#/gitsign.exe"
       }
     },
     "hash": {
