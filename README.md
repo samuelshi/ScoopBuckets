@@ -1,4 +1,4 @@
-<p align="center"><img src="https://gcore.jsdelivr.net/gh/cmontage/scoopbucket@main/bin/scoop.png" alt="Scoop Logo" ></p>
+<p align="center"><img src="https://avatars.githubusercontent.com/u/16618068" alt="Scoop Logo" style="width: 20%; height: 20%"></p>
 
 <h1 align="center">Scoop Bucket All In One</h1>
 
@@ -25,7 +25,7 @@ $PSVersionTable.PSVersion.Major # should be >= 5.1
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # 下载安装脚本到本地
-irm https://mirror.ghproxy.com/raw.githubusercontent.com/lzwme/scoop-proxy-cn/master/install.ps1 -outfile 'install.ps1'
+irm https://ghp.ci/https://raw.githubusercontent.com/samuelshi/ScoopBuckets/refs/heads/main/install.ps1 -outfile 'install.ps1'
 
 # 自定义 Scoop 安装目录，以下是我的路径例子，你可以自己根据情况修改
 .\install.ps1 -ScoopDir 'D:\Apps\Scoop\ScoopApps' -ScoopGlobalDir 'D:\Apps\Scoop\ScoopApps-G' -NoProxy
@@ -35,7 +35,7 @@ scoop install 7zip git
 
 # Main Bucket 换镜像源
 scoop bucket rm main
-scoop bucket add main https://mirror.ghproxy.com/github.com/ScoopInstaller/Main
+scoop bucket add main https://ghp.ci/https://github.com/ScoopInstaller/Main
 ```
 
 ## 添加仓库
@@ -48,13 +48,13 @@ scoop bucket add main https://mirror.ghproxy.com/github.com/ScoopInstaller/Main
 1. 添加本仓库，运行命令
 
     ```powershell
-    scoop bucket add official https://mirror.ghproxy.com/github.com/cmontage/scoopbucket
+    scoop bucket add official https://ghp.ci/https://github.com/samuelshi/ScoopBuckets
 
     # 如果需要移除本仓库
     scoop bucket rm official
     ```
 
-2. 卸载之前从main下的 7zip 和 git 重新从本仓库的Bucket安装，这里是为了来源统一，当然你也可以手动更改应用目录里的 install.json 
+2. 卸载之前从main下的 7zip 和 git 重新从本仓库的Bucket安装，这里是为了来源统一，当然你也可以手动更改应用目录里的 install.json
 
     ```powershell
     # 卸载
@@ -68,7 +68,7 @@ scoop bucket add main https://mirror.ghproxy.com/github.com/ScoopInstaller/Main
 
     ```powershell
     # 下载 7zip git sudo dark innounp ...
-    scoop install official/7zip official/git official/aria2 official/sudo official/dark official/innounp 
+    scoop install official/7zip official/git official/aria2 official/sudo official/dark official/innounp
     ```
 
 4. 使用替换自带的 scoop search，因为自带的比较慢
